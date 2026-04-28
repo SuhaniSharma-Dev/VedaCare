@@ -48,4 +48,10 @@ public class HomeController
 		model.addAttribute("adminLogin",new AdminLogin());
 		return "Login";
 	}
+
+	@GetMapping("/register")
+	public String register()
+	{
+		return "Register";
+	}
 }

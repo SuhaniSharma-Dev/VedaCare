@@ -47,16 +47,7 @@ public class AdminController {
 	@GetMapping("/adminLogin")
 	public String  getAllData(  @ModelAttribute("adminLogin") AdminLogin login, Model model)
 	{
-		String email=login.getEmail();
-		String password=login.getPassword();
-		if(adminServices.validateAdminCredentials(email, password))
-		{
-			return "redirect:/admin/services";
-		}
-		else {
-			model.addAttribute("error", "Invalid email or password");
-			return "Login";
-		}
+
 
 	}
 
